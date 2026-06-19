@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Auth.css";
 
+import API from "../config";
 import {
   FaUser,
   FaEnvelope,
@@ -35,7 +36,7 @@ const Signup = () => {
       };
 
       const res = await fetch(
-        "http://localhost:5000/signup",
+        `${API}/signup`,
         {
           method: "POST",
           headers: {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Analytics.css";
 
+import API from "../config";
 import {
   FiHome,
   FiBriefcase,
@@ -41,7 +42,7 @@ const Analytics = () => {
 localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/companies/${email}`,  {
+      `${API}/companies/${email}`,  {
     headers:{
       authorization:token
     }

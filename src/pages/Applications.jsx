@@ -6,6 +6,7 @@ import React, {
 import "../Applications.css";
 import CompanyCard from "../components/CompanyCard";
 
+import API from "../config";
 import {
   FiHome,
   FiBriefcase,
@@ -43,7 +44,7 @@ localStorage.getItem(
   "token"
 );
     const res = await fetch(
-      `http://localhost:5000/companies/${email}`,{headers:{
+      `${API}/companies/${email}`,{headers:{
   authorization:token
 }}
     );
@@ -63,7 +64,7 @@ localStorage.getItem(
 const token =
 localStorage.getItem("token");
     await fetch(
-      `http://localhost:5000/companies/${id}`,
+      `${API}/companies/${id}`,
       {
         method:"DELETE",
         headers:{
@@ -80,7 +81,7 @@ localStorage.getItem("token");
 const token =
 localStorage.getItem("token");
     await fetch(
-      `http://localhost:5000/companies/${id}`,
+      `${API}/companies/${id}`,
       {
         method:"PUT",
         headers:{

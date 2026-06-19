@@ -5,6 +5,7 @@ import React, {
 
 import "../Profile.css";
 
+import API from "../config";
 import {
   FiHome,
   FiBriefcase,
@@ -53,7 +54,7 @@ useState("");
 localStorage.getItem("token");
 
   const res = await fetch(
-    `http://localhost:5000/profile/${email}`, {
+    `${API}/profile/${email}`, {
     headers:{
       authorization:token
     }}
@@ -109,7 +110,7 @@ localStorage.getItem("token");
 
     const res =
       await fetch(
-        `http://localhost:5000/companies/${email}`,  {
+        `${API}/companies/${email}`,  {
     headers:{
       authorization:token
     }
@@ -183,7 +184,7 @@ const token =
 localStorage.getItem("token");
   await fetch(
 
-    `http://localhost:5000/profile/${user.email}`,
+    `${API}/profile/${user.email}`,
 
     {
       method:"PUT",

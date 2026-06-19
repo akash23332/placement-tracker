@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Auth.css";
 
+import API from "../config";
 import {
   FaEnvelope,
   FaLock,
@@ -22,7 +23,7 @@ const Login = () => {
       };
 
       const res = await fetch(
-        "http://localhost:5000/login",
+         `${API}/login`,
         {
           method: "POST",
           headers: {

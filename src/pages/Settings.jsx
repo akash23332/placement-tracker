@@ -5,6 +5,7 @@ useEffect
 
 import "../Settings.css";
 
+import API from "../config";
 import {
 FiHome,
 FiBriefcase,
@@ -52,7 +53,7 @@ const token =
 localStorage.getItem("token");
 const res =
 await fetch(
-  `http://localhost:5000/profile/${email}`,{
+  `${API}/profile/${email}`,{
     headers:{
       authorization:token
     }
@@ -117,7 +118,7 @@ localStorage.getItem("token");
 const res =
 
 await fetch(
-  "http://localhost:5000/change-password",
+  `${API}/change-password`,
   {
     method:"PUT",
 

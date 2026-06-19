@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Dashboard.css";
 
+import API from "../config";
 import {
   FiHome,
   FiBriefcase,
@@ -32,7 +33,7 @@ const Dashboard = () => {
     localStorage.getItem("token");
 
   const res = await fetch(
-    `http://localhost:5000/companies/${email}`,
+    `${API}/companies/${email}`,
     {
       headers:{
         authorization:token
@@ -63,7 +64,7 @@ const Dashboard = () => {
     };
 
     await fetch(
-      "http://localhost:5000/companies",
+      `${API}/companies`,
       {
         method:"POST",
         headers:{
