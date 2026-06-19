@@ -7,7 +7,7 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const authMiddleware =
-require("./middleware/authMiddleware");
+require("./middleWare/authMiddleware");
 app.use(express.json());
 app.use(cors());
 
