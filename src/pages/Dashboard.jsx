@@ -62,6 +62,8 @@ const Dashboard = () => {
       userEmail:
         localStorage.getItem("email")
     };
+    const token =
+localStorage.getItem("token");
 
     await fetch(
       `${API}/companies`,
@@ -69,7 +71,7 @@ const Dashboard = () => {
         method:"POST",
         headers:{
           "Content-Type":
-          "application/json"
+          "application/json",authorization:token
         },
         body:JSON.stringify(
           newCompany
