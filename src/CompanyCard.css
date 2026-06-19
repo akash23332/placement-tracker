@@ -1,0 +1,187 @@
+.company-card{
+  background: linear-gradient(
+    145deg,
+    rgba(18,28,48,.95),
+    rgba(24,34,58,.95)
+  );
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: .35s;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.25);
+}
+
+.company-card:hover{
+  transform: translateY(-8px);
+
+  border-color: rgba(139,92,246,.5);
+
+  box-shadow:
+  0 20px 50px rgba(139,92,246,.25);
+}
+
+.company-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:25px;
+}
+
+.company-top h2{
+  color:white;
+  font-size:32px;
+  font-weight:800;
+  margin:0;
+  word-break:break-word;
+}
+
+.company-status{
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  color:white;
+}
+
+.company-status.Applied{
+  background:linear-gradient(
+    135deg,
+    #f59e0b,
+    #f97316
+  );
+}
+
+.company-status.Interview{
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+}
+
+.company-status.Selected{
+  background:linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+}
+
+.company-status.Rejected{
+  background:linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626
+  );
+}
+
+.company-info{
+  margin-bottom:20px;
+}
+
+.company-info p{
+  color:#94a3b8;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.company-info span{
+  color:white;
+  font-size:24px;
+  font-weight:600;
+  word-break:break-word;
+}
+
+.company-actions{
+  display:flex;
+  gap:12px;
+  margin-top:20px;
+}
+
+.company-actions select{
+  flex:1;
+
+  height:50px;
+
+  background:#162338;
+
+  color:white;
+
+  border:1px solid rgba(
+    139,
+    92,
+    246,
+    .5
+  );
+
+  border-radius:14px;
+
+  padding:0 15px;
+}
+
+.company-actions select:focus{
+  outline:none;
+
+  border-color:#8b5cf6;
+}
+
+.delete-btn{
+  width:110px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626
+  );
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.delete-btn:hover{
+  transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+  .company-actions{
+    flex-direction:column;
+  }
+
+  .delete-btn{
+    width:100%;
+    height:50px;
+  }
+
+  .company-top{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .company-top h2{
+    font-size:28px;
+  }
+}
